@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Cirun OpenStack
+name: Cirun on OpenStack
 
 # Controls when the workflow will run
 on:
@@ -29,5 +29,16 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - name: Debugging with tmate
-        uses: mxschmitt/action-tmate@v3.9
+      - name: Run "df -h"
+        run: df -h
+
+      - name: Run "uptime"
+        run: uptime
+        
+      - name: Run "lscpu"
+        run: lscpu
+
+      - name: Run "nproc"
+        run: nproc
+#       - name: Debugging with tmate
+#         uses: mxschmitt/action-tmate@v3.9
