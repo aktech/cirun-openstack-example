@@ -5,11 +5,11 @@ runners:
     # Cloud Provider: Openstack
     cloud: openstack
     # Instance type refers to flavors in openstack
-    instance_type: m1.small
+    instance_type: OT-GPU-1
     # By default openstack provides cirros image
     # To build custom image check the custom image docs
     # This image is not suitable for jobs to be performed by runner, refer to custom image docs and create a new image first
-    machine_image: ubuntu-20.04
+    machine_image: Ubuntu 20.04 Focal Server
     # preemptible instances not supported
     preemptible: false
     # Path of the relevant workflow file
