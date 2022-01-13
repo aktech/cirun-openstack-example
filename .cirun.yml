@@ -1,0 +1,19 @@
+# Self-Hosted Github Action Runners on Openstack via Cirun.io
+# Reference: https://docs.cirun.io/reference/yaml.html
+runners:
+  - name: openstack-runner
+    # Cloud Provider: Openstack
+    cloud: openstack
+    # Instance type refers to flavors in openstack
+    instance_type: OT-GPU-1
+    # By default openstack provides cirros image
+    # To build custom image check the custom image docs
+    # This image is not suitable for jobs to be performed by runner, refer to custom image docs and create a new image first
+    machine_image: Ubuntu 20.04 Focal Server
+    # preemptible instances not supported
+    preemptible: false
+    # Path of the relevant workflow file
+    workflow: .github/workflows/blank.yml
+    # Number of runners to provision on every trigger on Actions job
+    # See .github/workflows/build-gpu.yml
+    count: 1
