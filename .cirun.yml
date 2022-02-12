@@ -14,4 +14,5 @@ runners:
     workflow: .github/workflows/blank.yml
     # Number of runners to provision on every trigger on Actions job
     # See .github/workflows/blank.yml
+    gpu: True
     count: 1
