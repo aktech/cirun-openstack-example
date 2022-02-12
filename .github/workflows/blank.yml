@@ -40,5 +40,8 @@ jobs:
 
       - name: Run "nproc"
         run: nproc
+
+      - name: Try nvidia-smi
+        run: nvidia-smi || true
 #       - name: Debugging with tmate
 #         uses: mxschmitt/action-tmate@v3.9
