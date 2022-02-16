@@ -43,5 +43,5 @@ jobs:
 
       - name: Try nvidia-smi
         run: nvidia-smi || true
-#       - name: Debugging with tmate
-#         uses: mxschmitt/action-tmate@v3.9
+      - name: Debugging with tmate
+        uses: mxschmitt/action-tmate@v3.9
