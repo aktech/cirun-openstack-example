@@ -7,6 +7,6 @@ runners:
     # Instance type refers to flavors in openstack
     instance_type: OT-GPU-1
     # The machine image to use for creating VM
-    machine_image: Ubuntu 20.04 Focal Server with NVIDIA
+    machine_image: Ubuntu 20.04 Focal Server with NVIDIA and Docker
     # Path of the relevant workflow file
     workflow: .github/workflows/blank.yml
