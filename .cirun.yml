@@ -5,9 +5,9 @@ runners:
     # Cloud Provider: Openstack
     cloud: openstack
     # Instance type refers to flavors in openstack
-    instance_type: gpu_medium
+    instance_type: gpu_tiny
     # The machine image to use for creating VM
-    machine_image: ubuntu-2204-cloud-jammy-20221104
+    machine_image: ubuntu-focal-nvidia-14112022
     # Path of the relevant workflow file
     labels:
       - cirun-openstack
