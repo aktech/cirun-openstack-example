@@ -8,6 +8,7 @@ runners:
     instance_type: gpu_tiny
     # The machine image to use for creating VM
     machine_image: ubuntu-focal-nvidia-14112022
+    region: RegionOne
     # Path of the relevant workflow file
     labels:
       - cirun-openstack
