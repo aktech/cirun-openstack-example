@@ -52,3 +52,11 @@ jobs:
 
       - name: Check distribution
         run: cat /etc/*release
+
+      - name: Set up Python
+        uses: conda-incubator/setup-miniconda@v2
+        env:
+          CONDA: /home/runnerx/miniconda3
+        with:
+          python-version: 3.8
+          miniconda-version: "latest"
