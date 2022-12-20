@@ -12,3 +12,15 @@ runners:
     # Path of the relevant workflow file
     labels:
       - cirun-openstack
+
+  - name: openstack-cpu-runner
+    # Cloud Provider: Openstack
+    cloud: openstack
+    # Instance type refers to flavors in openstack
+    instance_type: ci_medium
+    # The machine image to use for creating VM
+    machine_image: ubuntu-2204-cloud-jammy-20221104
+    region: RegionOne
+    # Path of the relevant workflow file
+    labels:
+      - cirun-cpu-runner
