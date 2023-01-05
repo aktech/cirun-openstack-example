@@ -7,7 +7,7 @@ runners:
     # Instance type refers to flavors in openstack
     instance_type: gpu_tiny
     # The machine image to use for creating VM
-    machine_image: ubuntu-focal-nvidia-14112022
+    machine_image: ubuntu-2204-nvidia-docker-20221229
     region: RegionOne
     # Path of the relevant workflow file
     labels:
