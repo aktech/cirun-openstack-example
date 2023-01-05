@@ -1,7 +1,7 @@
 # Self-Hosted Github Action Runners on Openstack via Cirun.io
 # Reference: https://docs.cirun.io/reference/yaml.html
 runners:
-  - name: openstack-runner
+  - name: openstack-gpu-runner
     # Cloud Provider: Openstack
     cloud: openstack
     # Instance type refers to flavors in openstack
@@ -11,7 +11,7 @@ runners:
     region: RegionOne
     # Path of the relevant workflow file
     labels:
-      - cirun-openstack
+      - cirun-openstack-gpu
 
   - name: openstack-cpu-runner
     # Cloud Provider: Openstack
