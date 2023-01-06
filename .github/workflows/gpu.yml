@@ -12,7 +12,7 @@ jobs:
   build:
     strategy:
       matrix:
-        version: [1, 2]
+        version: [1, 2, 3, 4, 5]
     runs-on: cirun-openstack-gpu
     steps:
       - uses: actions/checkout@v2
