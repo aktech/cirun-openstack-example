@@ -12,7 +12,7 @@ jobs:
   build:
     strategy:
       matrix:
-        version: [1, 2, 3, 4, 5]
+        version: [1, 2]
     runs-on: cirun-openstack-gpu
     steps:
       - uses: actions/checkout@v2
@@ -52,3 +52,6 @@ jobs:
         with:
           python-version: 3.8
           miniconda-version: "latest"
+
+      - name: Sleep
+        run: sleep 180
