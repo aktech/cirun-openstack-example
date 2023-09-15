@@ -37,7 +37,9 @@ jobs:
         run: |
           docker ps
           docker version
-      
+      - name: Docker run GPU container
+        run: |
+          docker run --gpus all --rm nvcr.io/nvidia/pytorch:21.02-py3 nvidia-smi
       - name: Check distribution
         run: cat /etc/*release
 
