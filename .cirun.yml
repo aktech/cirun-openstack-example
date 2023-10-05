@@ -24,3 +24,4 @@ runners:
     # Path of the relevant workflow file
     labels:
       - cirun-cpu-runner
+
