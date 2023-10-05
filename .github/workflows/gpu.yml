@@ -53,6 +53,5 @@ jobs:
         with:
           python-version: 3.8
           miniconda-version: "latest"
-
       - name: Sleep
-        run: sleep 180
+        run: sleep 10
