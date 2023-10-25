@@ -1,7 +1,7 @@
 name: Cirun on OpenStack [GPU]
 
 on:
-  push:
+  # push:
   workflow_dispatch:
 
 jobs:
