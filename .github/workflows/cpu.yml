@@ -12,8 +12,6 @@ jobs:
     runs-on: cirun-cpu-runner
     steps:
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
 
@@ -32,9 +30,22 @@ jobs:
       - name: Run "lspci"
         run: lspci
 
+      - name: Run "free"
+        run: free
+
       - name: Try nvidia-smi
         run: nvidia-smi || true
 
+      - name: Try Docker
+        run: |
+          docker ps
+          docker version
+      - name: Docker run GPU container
+        run: |
+          docker run --gpus all --rm nvcr.io/nvidia/pytorch:21.02-py3 nvidia-smi
+      - name: Check Docker MTU value
+        run: |
+          cat /etc/docker/daemon.json || true
       - name: Check distribution
         run: cat /etc/*release
 
@@ -43,5 +54,7 @@ jobs:
         env:
           CONDA: /home/runnerx/miniconda3
         with:
-          python-version: 3.8
+          python-version: 3.11
           miniconda-version: "latest"
+      - name: Sleep
+        run: sleep 10

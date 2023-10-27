@@ -30,6 +30,9 @@ jobs:
       - name: Run "lspci"
         run: lspci
 
+      - name: Run "free"
+        run: free
+
       - name: Try nvidia-smi
         run: nvidia-smi || true
 
