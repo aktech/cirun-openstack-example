@@ -1,7 +1,7 @@
 name: Cirun on OpenStack [GPU]
 
 on:
-  # push:
+  push:
   workflow_dispatch:
 
 jobs:
@@ -40,9 +40,9 @@ jobs:
         run: |
           docker ps
           docker version
-      - name: Docker run GPU container
-        run: |
-          docker run --gpus all --rm nvcr.io/nvidia/pytorch:21.02-py3 nvidia-smi
+      # - name: Docker run GPU container
+      #   run: |
+      #     docker run --gpus all --rm nvcr.io/nvidia/pytorch:21.02-py3 nvidia-smi
       - name: Check Docker MTU value
         run: |
           cat /etc/docker/daemon.json || true
